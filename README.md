@@ -4,6 +4,9 @@ Build IGV instance that can take screenshots without a GUI or X11
 
 # quick test
 
+- just starts IGV and does nothing else
+	- need to pass --batch etc to actually generate screenshots
+
 `singularity run /home/pankrat2/shared/bin/igvVM/igv.sif`
 
 # Create
