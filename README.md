@@ -19,3 +19,25 @@ quay.io/singularity/docker2singularity \
 igv
 
 ```
+
+# Running 
+
+```
+
+
+
+singularityImage=/path/to/igv-...sif
+# Directory containing `.igv` files. `.igv` files need to be set up to use the directories that have been mapped from msi/local to "/output/", "/dataDir/", etc. See 
+
+igvBatchDir=./
+# where screenshots will be created
+pngOutputDir=/path/to/outputDir/
+# where bam/vcf file defined in the .igv file are located
+bamVcfDir=/path/to/bam_vcfDir/
+singularity run \
+--bind $pngOutputDir:/output/ \
+--bind $bamVcfDir:/dataDir/ \
+--bind $igvBatchDir:/igv/ \
+$singularityImage \
+--batch /igv/example.igv
+```
