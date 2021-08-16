@@ -1,6 +1,11 @@
 # IGV-VM
 Build IGV instance that can take screenshots without a GUI or X11
 
+
+# quick test
+
+`singularity run /home/pankrat2/shared/bin/igvVM/igv.sif`
+
 # Create
 
 1. install docker (on OSX, linux using only singularity may be easier) https://www.docker.com , https://www.cprime.com/resources/blog/docker-on-mac-with-homebrew-a-step-by-step-tutorial/
@@ -20,6 +25,11 @@ igv
 
 ```
 Then transfer the `.sif` file to where it will be run (e.g. msi)
+
+```
+rsync -avzP /full/path/to/singularity/*.sif msi:/home/pankrat2/shared/bin/igvVM/
+
+```
 
 # Running 
 
