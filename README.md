@@ -27,7 +27,7 @@ igv
 
 
 singularityImage=/path/to/igv-...sif
-# Directory containing `.igv` files. `.igv` files need to be set up to use the directories that have been mapped from msi/local to "/output/", "/dataDir/", etc. See 
+# Directory containing `.igv` files. `.igv` files need to be set up to use the directories that have been mapped from msi/local to "/output/", "/dataDir/", etc. See https://github.com/PankratzLab/IGV-VM/blob/main/example.igv
 
 igvBatchDir=./
 # where screenshots will be created
