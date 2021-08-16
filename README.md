@@ -37,25 +37,24 @@ rsync -avzP /full/path/to/singularity/*.sif msi:/home/pankrat2/shared/bin/igvVM/
 # Running 
 
 ```
-
-
 # where the .sif file is
 singularityImage=/path/to/igv-...sif
 
-# Directory containing `.igv` files. `.igv` files need to be set up to use the directories that have been mapped from msi/local to "/output/", "/dataDir/", etc. See https://github.com/PankratzLab/IGV-VM/blob/main/example.igv
-igvBatchDir=./
-
 # where screenshots will be created
-pngOutputDir=/path/to/outputDir/
+snapshotDirectory=/path/to/snap/
 
 # where bam/vcf file defined in the .igv file are located
-bamVcfDir=/path/to/bam_vcfDir/
+bamVCFDir=/path/to/data/
+
+# Directory containing `.igv` files. 
+igvScriptDir=/path/to/igvs/
 
 # run using singularity after mapping directories
+
 singularity run \
---bind $pngOutputDir:/output/ \
---bind $bamVcfDir:/dataDir/ \
---bind $igvBatchDir:/igv/ \
+--bind $snapshotDirectory \
+--bind $bamVCFDir \
+--bind $igvScriptDir \
 $singularityImage \
---batch /igv/example.igv
+--batch $igvScriptDir/test.igv
 ```
