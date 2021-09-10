@@ -57,4 +57,5 @@ singularity run \
 --bind $igvScriptDir \
 $singularityImage \
 --batch $igvScriptDir/test.igv
+
 ```
