@@ -12,7 +12,7 @@ RUN apt-get install -yq bash
 RUN apt-get install -yq xvfb
 RUN apt-get install -yq openjdk-11-jdk
 RUN apt-get install -yq fontconfig
-
+RUN apt-get install -yq git
 WORKDIR /igv/IGV_Linux_2.10.3
 
 ADD entrypoint.sh /entrypoint.sh
