@@ -7,7 +7,7 @@ Build IGV instance that can take screenshots without a GUI or X11
 - just starts IGV and does nothing else
 	- need to pass --batch etc to actually generate screenshots
 
-`singularity run /home/pankrat2/shared/bin/igvVM/igv.sif`
+`singularity run /path/to/igv.sif`
 
 # Create
 
@@ -30,7 +30,7 @@ igv
 Then transfer the `.sif` file to where it will be run (e.g. msi)
 
 ```
-rsync -avzP /full/path/to/singularity/*.sif msi:/home/pankrat2/shared/bin/igvVM/
+rsync -avzP /full/path/to/singularity/igv.sif /path/to/igv.sif
 
 ```
 
