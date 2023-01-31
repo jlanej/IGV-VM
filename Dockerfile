@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+# docker build -t igv-vm:latest .
 WORKDIR /igv
 RUN apt-get update 
 RUN apt-get install -yq wget
@@ -23,6 +24,6 @@ WORKDIR /igv/IGV_Linux_2.10.3
 
 
 
-ADD entrypoint.sh /app/IGV-VM/entrypoint.sh
-ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
+# ADD entrypoint.sh /app/IGV-VM/entrypoint.sh
+ENTRYPOINT ["/bin/sh", "/app/IGV-VM/entrypoint.sh"]
 
