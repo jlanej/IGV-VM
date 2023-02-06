@@ -15,6 +15,7 @@ RUN apt-get install -yq git
 
 WORKDIR /igv
 RUN git clone https://github.com/PankratzLab/IGV-VM.git
+RUN chmod +x /igv/IGV-VM/entrypoint.sh
 
 RUN wget https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Linux_2.16.0_WithJava.zip
 RUN unzip IGV_Linux_2.16.0_WithJava.zip
