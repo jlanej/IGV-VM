@@ -1,6 +1,5 @@
 FROM ubuntu:latest
 # docker build -t igv-vm:latest .
-WORKDIR /igv
 RUN apt-get update 
 RUN apt-get install -yq wget
 
@@ -16,11 +15,10 @@ RUN apt-get install -yq git
 WORKDIR /igv
 RUN git clone https://github.com/PankratzLab/IGV-VM.git
 
+RUN wget https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Linux_2.16.0_WithJava.zip
+RUN unzip IGV_Linux_2.16.0_WithJava.zip
 
-RUN wget https://data.broadinstitute.org/igv/projects/downloads/2.10/IGV_Linux_2.10.3_WithJava.zip
-RUN unzip IGV_Linux_2.10.3_WithJava.zip
-
-WORKDIR /igv/IGV_Linux_2.10.3
+WORKDIR /igv/IGV_Linux_2.16.0
 
 
 
