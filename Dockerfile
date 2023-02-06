@@ -1,7 +1,6 @@
 FROM ubuntu:latest
 # docker build -t igv-vm:latest .
 RUN apt-get update 
-RUN apt-get update 
 
 RUN apt-get install -yq wget
 
