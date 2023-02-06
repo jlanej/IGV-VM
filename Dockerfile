@@ -13,7 +13,7 @@ RUN apt-get install -yq openjdk-11-jdk
 RUN apt-get install -yq fontconfig
 RUN apt-get install -yq git
 
-WORKDIR /app
+WORKDIR /igv
 RUN git clone https://github.com/PankratzLab/IGV-VM.git
 
 
@@ -25,5 +25,5 @@ WORKDIR /igv/IGV_Linux_2.10.3
 
 
 # ADD entrypoint.sh /app/IGV-VM/entrypoint.sh
-ENTRYPOINT ["/bin/sh", "/app/IGV-VM/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "/igv/IGV-VM/entrypoint.sh"]
 
