@@ -21,7 +21,5 @@ RUN unzip IGV_Linux_2.16.0_WithJava.zip
 WORKDIR /igv/IGV_Linux_2.16.0
 
 
-
-# ADD entrypoint.sh /app/IGV-VM/entrypoint.sh
 ENTRYPOINT ["/bin/sh", "/igv/IGV-VM/entrypoint.sh"]
 
