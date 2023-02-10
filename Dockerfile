@@ -14,6 +14,8 @@ RUN apt-get install -yq fontconfig
 RUN apt-get install -yq git
 
 WORKDIR /igv
+ADD https://api.github.com/repos/PankratzLab/IGV-VM/git/refs/heads/main version.json
+
 RUN git clone https://github.com/PankratzLab/IGV-VM.git
 RUN chmod +x /igv/IGV-VM/entrypoint.sh
 
